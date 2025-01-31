@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ai;
+
+service AI {
+    rpc chat (stream ChatRequest) returns (stream ChatReply) {}
+}
+
+message ChatRequest {
+    string message = 1;
+}
+
+message ChatReply {
+    string message = 1;
+}
